@@ -1,0 +1,23 @@
+root {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 651px;
+    background-color: rgba(175, 79, 103, 0.411);
+    display: flex;
+    
+    flex-flow: row wrap;    
+}
+
+.box {
+    width: 33px;
+    height: 33px;
+    background-color: rgba(5, 74, 10, 0.5);
+    border:dashed black;
+}
+
+.box:hover {
+    background-color: red;
+}
