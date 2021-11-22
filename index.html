@@ -7,10 +7,27 @@
     <title>Etching and Sketching</title>
 </head>
 
+<header>
+    <div class="center">
+        <H1>ETCH A SKETCH A BETCH</H1>
+    </div>
+</header>
+
 <body>
+    <div class="bigContain">
+        <div class="leftContain">
+            <div class="center" id="buttonContainer">
+                <button id="reset">reset</button>
+            </div>
 
-    <div id="main"></div>
+            <div id="sliderContainer">
+                <input type="range" min="1" max="64" value="8" id="slider">
+                <p id="output"></p>
+            </div>
+        </div>
 
+        <div id="main"></div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>

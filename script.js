@@ -13,29 +13,52 @@ function createGrid(x) {
 
     //Creates the box that will be generated
 
+    for (let i = 0; i < x; i++) {
 
+        const row = document.createElement('div');
 
-    for (let i = 0; i < (x * x); i++) {
+        row.classList.add('row')
 
-        const box = document.createElement('div');
-        const chk = document.createTextNode(i);
-        box.classList.add('box');
-        box.appendChild(chk);
-
-        box.addEventListener("mouseover", function (event) {
-            event.target.style.backgroundColor = "yellow";
-        })
-
+        container.appendChild(row);
         
-        container.appendChild(box);
+        for (let i = 0; i < x; i++) {
+
+            const column = document.createElement('div');
+            const chk = document.createTextNode(i);
+
+            column.classList.add('column');
+            column.appendChild(chk);    
+            
+            column.addEventListener("mouseover", function (event) {
+                event.target.style.backgroundColor = "black";
+            })
+
+            row.appendChild(column);
+        }
     };
 
 
 }
 
+const slider = document.getElementById('slider');
+const output = document.getElementById('output');
+output.innerHTML = `${slider.value} x ${slider.value}`;
 
+slider.oninput = function() {
+    output.innerHTML = `${slider.value} x ${slider.value}`;
+    main.innerHTML = "";
+    createGrid(slider.value);
+}
 
+const button = document.getElementById('reset');
 
-createGrid(16);
+button.onclick = function() {
+    reset();
+}
 
+function reset() {
+    main.innerHTML = "";
+    createGrid(slider.value);
+}
 
+createGrid(8);

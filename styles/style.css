@@ -3,21 +3,51 @@ root {
     padding: 0;
 }
 
-.container {
-    width: 651px;
-    background-color: rgba(175, 79, 103, 0.411);
+.center {
     display: flex;
-    
-    flex-flow: row wrap;    
+    justify-content: center;
 }
 
-.box {
+.container {
+    margin: auto;
+    width: 624px;
+    height: 624px;  
+    background-color: rgba(175, 79, 103, 0.411);
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+@media screen and (max-width: 624px) {
+    .container {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+/* .box {
     width: 33px;
     height: 33px;
     background-color: rgba(5, 74, 10, 0.5);
     border:dashed black;
+} */
+
+.row{
+    display: flex;
+    flex-flow: row nowrap;
+    flex: 1;
 }
 
-.box:hover {
-    background-color: red;
+.column{
+    flex-basis: 100%;
+}
+
+.bigContain{
+    display: flex;
+    justify-content: center;
+}
+
+.leftContain{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
 }
