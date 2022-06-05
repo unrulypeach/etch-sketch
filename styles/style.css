@@ -3,6 +3,11 @@ root {
     padding: 0;
 }
 
+body {
+    background-color: rgba(95, 116, 106, 0.222);
+}
+
+
 .center {
     display: flex;
     justify-content: center;
@@ -12,9 +17,12 @@ root {
     margin: auto;
     width: 624px;
     height: 624px;  
-    background-color: rgba(175, 79, 103, 0.411);
     display: flex;
     flex-flow: column nowrap;
+    /* background-color: rgba(63, 90, 88, 0.222); */
+    background-color: rgba(185, 185, 185, 1);
+    border: 50px solid salmon;
+    border-radius: 50px;
 }
 
 @media screen and (max-width: 624px) {
@@ -24,12 +32,6 @@ root {
     }
 }
 
-/* .box {
-    width: 33px;
-    height: 33px;
-    background-color: rgba(5, 74, 10, 0.5);
-    border:dashed black;
-} */
 
 .row{
     display: flex;
@@ -38,12 +40,13 @@ root {
 }
 
 .column{
+    border: 1px solid salmon;
     flex-basis: 100%;
 }
 
 .bigContain{
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
 .leftContain{
@@ -51,3 +54,32 @@ root {
     flex-flow: column;
     justify-content: center;
 }
+
+.rightContain{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+
+.right{
+    border: 0;
+    padding: 20px 25px;
+    background-color: rgba(51, 109, 197, 0.450);
+    color: rgba(255, 255, 255, 0.76);
+}
+
+.right:hover{
+    background-color: rgba(26, 55, 100, 0.648);
+}
+
+.right:focus{
+    background-color: rgba(25, 71, 141, 0.904)
+}
+
+h2{
+    margin-bottom: 0;
+    background-color: rgba(25, 71, 141, 0.455);
+    color: rgba(255, 255, 255, 0.66);
+}
+
+
